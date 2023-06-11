@@ -1,0 +1,30 @@
+.container{
+   margin: 1rem;
+  padding: 1rem;  
+}
+.product_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  margin-bottom: 2rem 0;
+ 
+}
+
+.first_child {
+  display: flex;
+  align-items: center;
+}
+
+.back_arrow {
+  margin-right: 10px;
+}
+
+.title {
+  margin: 0;
+}
+
+.close_icon {
+  cursor: pointer;
+}
+
