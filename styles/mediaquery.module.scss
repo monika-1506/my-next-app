@@ -1,0 +1,34 @@
+@mixin responsive($minVal, $maxVal) {
+  @media only screen and (min-width: $minVal) and (max-width: $maxVal) {
+    @content;
+  }
+}
+
+@mixin deviceStyles($deviceType) {
+  @if ($deviceType ==mobile) {
+    @include responsive(10px, 769px) {
+      @content;
+    }
+  } @else if($deviceType ==lgDesktop) {
+    @include responsive(10px, 1400px) {
+      @content;
+    }
+  } @else if($deviceType ==iProTab) {
+    @include responsive(10px, 1024px) {
+      @content;
+    }
+  } @else if($deviceType ==proTab) {
+    @include responsive(992px, 1201px) {
+      @content;
+    }
+  } @else if($deviceType ==xl-desktop) {
+    @include responsive(1202px, 6601px) {
+      @content;
+    }
+  }
+
+  
+  @else {
+    @error 'device breakpoint invalid';
+  }
+}
