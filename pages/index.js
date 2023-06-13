@@ -5,6 +5,7 @@ import Header from "../Components/Header";
 import ArrowBtn from "../Components/ArrowBtn";
 import Arrows from "../Components/Arrows";
 import { useMediaQuery } from "@mui/material";
+import SliderComponent from "../Components/SliderComp";
 
 export default function Home() {
   const mx600 = useMediaQuery("( max-width:600px )");
@@ -15,7 +16,7 @@ export default function Home() {
         <title>BankSathi</title>
       </Head>
       {!mx600 && <Header />}
-
+      <SliderComponent />
       <Arrows />
       <ArrowBtn />
       {mx600 && <Header />}

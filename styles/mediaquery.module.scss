@@ -26,9 +26,7 @@
       @content;
     }
   }
-
-  
-  @else {
+@else {
     @error 'device breakpoint invalid';
   }
 }

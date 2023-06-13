@@ -28,6 +28,7 @@ const Arrows = () => {
         </h6>
       )}
         </div>
+        <div>Slider</div>
         <div className={styles.btns}>
         <button
           onClick={() => handleArrowClick("left")}

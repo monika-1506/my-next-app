@@ -1,0 +1,55 @@
+@import "./mediaquery.module.scss";
+.sliderContainer {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+
+  .slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .navigation {
+    position: absolute;
+    bottom: -22%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    margin: 2.5rem 0;
+    @include deviceStyles(mobile) {
+      gap: unset;
+      bottom: -50%;
+      margin: 2rem 0;
+    }
+  }
+
+  .arrowButton {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    color: grey;
+    cursor: pointer;
+  }
+
+  // .arrowButton:hover {
+  //   color: red;
+  // }
+
+  .active {
+    color: black;
+  }
+
+  @media (max-width: 600px) {
+    .arrowButton {
+      font-size: 18px;
+    }
+  }
+}
